@@ -1,19 +1,19 @@
 
-// Practice5_1View.h : CPractice5_1View 클래스의 인터페이스
+// Practice6_1View.h : CPractice6_1View 클래스의 인터페이스
 //
 enum DRAW_MODE { LINE_MODE, ELLIPSE_MODE, POLYGON_MODE };
 #pragma once
 
 
-class CPractice5_1View : public CView
+class CPractice6_1View : public CView
 {
 protected: // serialization에서만 만들어집니다.
-	CPractice5_1View();
-	DECLARE_DYNCREATE(CPractice5_1View)
+	CPractice6_1View();
+	DECLARE_DYNCREATE(CPractice6_1View)
 
 // 특성입니다.
 public:
-	CPractice5_1Doc* GetDocument() const;
+	CPractice6_1Doc* GetDocument() const;
 
 // 작업입니다.
 public:
@@ -29,7 +29,7 @@ protected:
 
 // 구현입니다.
 public:
-	virtual ~CPractice5_1View();
+	virtual ~CPractice6_1View();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -73,7 +73,7 @@ public:
 	afx_msg void OnNcRButtonDown(UINT nHitTest, CPoint point);
 };
 
-#ifndef _DEBUG  // Practice5_1View.cpp의 디버그 버전
+#ifndef _DEBUG  // Practice6_1View.cpp의 디버그 버전
 inline CPractice5_1Doc* CPractice5_1View::GetDocument() const
    { return reinterpret_cast<CPractice5_1Doc*>(m_pDocument); }
 #endif

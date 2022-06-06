@@ -3,7 +3,7 @@
 //
 
 #include "stdafx.h"
-#include "Practice5_1.h"
+#include "Practice6_1.h"
 
 #include "MainFrm.h"
 

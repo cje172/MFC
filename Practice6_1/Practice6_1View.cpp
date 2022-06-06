@@ -1,16 +1,16 @@
 
-// Practice5_1View.cpp : CPractice5_1View 클래스의 구현
+// Practice6_1View.cpp : CPractice6_1View 클래스의 구현
 //
 
 #include "stdafx.h"
 // SHARED_HANDLERS는 미리 보기, 축소판 그림 및 검색 필터 처리기를 구현하는 ATL 프로젝트에서 정의할 수 있으며
 // 해당 프로젝트와 문서 코드를 공유하도록 해 줍니다.
 #ifndef SHARED_HANDLERS
-#include "Practice5_1.h"
+#include "Practice6_1.h"
 #endif
 
-#include "Practice5_1Doc.h"
-#include "Practice5_1View.h"
+#include "Practice6_1Doc.h"
+#include "Practice6_1View.h"
 #include "MainFrm.h"
 
 #ifdef _DEBUG
@@ -20,35 +20,35 @@
 
 // CPractice5_1View
 
-IMPLEMENT_DYNCREATE(CPractice5_1View, CView)
+IMPLEMENT_DYNCREATE(CPractice6_1View, CView)
 
-BEGIN_MESSAGE_MAP(CPractice5_1View, CView)
+BEGIN_MESSAGE_MAP(CPractice6_1View, CView)
 	// 표준 인쇄 명령입니다.
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CPractice5_1View::OnFilePrintPreview)
+	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CPractice6_1View::OnFilePrintPreview)
 	ON_WM_CONTEXTMENU()
 	ON_WM_RBUTTONUP()
-	ON_COMMAND(ID_LINE, &CPractice5_1View::OnLine)
-	ON_COMMAND(ID_ELLIPSE, &CPractice5_1View::OnEllipse)
-	ON_COMMAND(ID_POLYGON, &CPractice5_1View::OnPolygon)
-	ON_COMMAND(ID_LINE_COLOR, &CPractice5_1View::OnLineColor)
-	ON_COMMAND(ID_FACE_COLOR, &CPractice5_1View::OnFaceColor)
-	ON_COMMAND(ID_BDIAGONAL, &CPractice5_1View::OnBdiagonal)
-	ON_COMMAND(ID_CROSS, &CPractice5_1View::OnCross)
-	ON_COMMAND(ID_VERTICAL, &CPractice5_1View::OnVertical)
-	ON_UPDATE_COMMAND_UI(ID_LINE, &CPractice5_1View::OnUpdateLine)
-	ON_UPDATE_COMMAND_UI(ID_ELLIPSE, &CPractice5_1View::OnUpdateEllipse)
-	ON_UPDATE_COMMAND_UI(ID_POLYGON, &CPractice5_1View::OnUpdatePolygon)
+	ON_COMMAND(ID_LINE, &CPractice6_1View::OnLine)
+	ON_COMMAND(ID_ELLIPSE, &CPractice6_1View::OnEllipse)
+	ON_COMMAND(ID_POLYGON, &CPractice6_1View::OnPolygon)
+	ON_COMMAND(ID_LINE_COLOR, &CPractice6_1View::OnLineColor)
+	ON_COMMAND(ID_FACE_COLOR, &CPractice6_1View::OnFaceColor)
+	ON_COMMAND(ID_BDIAGONAL, &CPractice6_1View::OnBdiagonal)
+	ON_COMMAND(ID_CROSS, &CPractice6_1View::OnCross)
+	ON_COMMAND(ID_VERTICAL, &CPractice6_1View::OnVertical)
+	ON_UPDATE_COMMAND_UI(ID_LINE, &CPractice6_1View::OnUpdateLine)
+	ON_UPDATE_COMMAND_UI(ID_ELLIPSE, &CPractice6_1View::OnUpdateEllipse)
+	ON_UPDATE_COMMAND_UI(ID_POLYGON, &CPractice6_1View::OnUpdatePolygon)
 	ON_WM_MOUSEMOVE()
 	ON_WM_LBUTTONDOWN()
 	ON_WM_LBUTTONUP()
 	ON_WM_NCRBUTTONDOWN()
 END_MESSAGE_MAP()
 
-// CPractice5_1View 생성/소멸
+// CPractice6_1View 생성/소멸
 
-CPractice5_1View::CPractice5_1View()
+CPractice6_1View::CPractice6_1View()
 	: m_nDrawMode(0)
 	, m_nHatchStyle(0)
 	, m_ptStart(0)
@@ -72,11 +72,11 @@ CPractice5_1View::CPractice5_1View()
 	m_colorBrush = RGB(255, 255, 255);		// brush color를 흰색으로 초기화
 }
 
-CPractice5_1View::~CPractice5_1View()
+CPractice6_1View::~CPractice6_1View()
 {
 }
 
-BOOL CPractice5_1View::PreCreateWindow(CREATESTRUCT& cs)
+BOOL CPractice6_1View::PreCreateWindow(CREATESTRUCT& cs)
 {
 	// TODO: CREATESTRUCT cs를 수정하여 여기에서
 	//  Window 클래스 또는 스타일을 수정합니다.
@@ -86,9 +86,9 @@ BOOL CPractice5_1View::PreCreateWindow(CREATESTRUCT& cs)
 
 // CPractice5_1View 그리기
 
-void CPractice5_1View::OnDraw(CDC* pDC)
+void CPractice6_1View::OnDraw(CDC* pDC)
 {
-	CPractice5_1Doc* pDoc = GetDocument();
+	CPractice6_1Doc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
@@ -129,36 +129,36 @@ void CPractice5_1View::OnDraw(CDC* pDC)
 // CPractice5_1View 인쇄
 
 
-void CPractice5_1View::OnFilePrintPreview()
+void CPractice6_1View::OnFilePrintPreview()
 {
 #ifndef SHARED_HANDLERS
 	AFXPrintPreview(this);
 #endif
 }
 
-BOOL CPractice5_1View::OnPreparePrinting(CPrintInfo* pInfo)
+BOOL CPractice6_1View::OnPreparePrinting(CPrintInfo* pInfo)
 {
 	// 기본적인 준비
 	return DoPreparePrinting(pInfo);
 }
 
-void CPractice5_1View::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
+void CPractice6_1View::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
 	// TODO: 인쇄하기 전에 추가 초기화 작업을 추가합니다.
 }
 
-void CPractice5_1View::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
+void CPractice6_1View::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
 	// TODO: 인쇄 후 정리 작업을 추가합니다.
 }
 
-void CPractice5_1View::OnRButtonUp(UINT /* nFlags */, CPoint point)
+void CPractice6_1View::OnRButtonUp(UINT /* nFlags */, CPoint point)
 {
 	ClientToScreen(&point);
 	OnContextMenu(this, point);
 }
 
-void CPractice5_1View::OnContextMenu(CWnd* /* pWnd */, CPoint point)
+void CPractice6_1View::OnContextMenu(CWnd* /* pWnd */, CPoint point)
 {
 #ifndef SHARED_HANDLERS
 	if (m_bContextMenu == true)
@@ -170,31 +170,31 @@ void CPractice5_1View::OnContextMenu(CWnd* /* pWnd */, CPoint point)
 }
 
 
-// CPractice5_1View 진단
+// CPractice6_1View 진단
 
 #ifdef _DEBUG
-void CPractice5_1View::AssertValid() const
+void CPractice6_1View::AssertValid() const
 {
 	CView::AssertValid();
 }
 
-void CPractice5_1View::Dump(CDumpContext& dc) const
+void CPractice6_1View::Dump(CDumpContext& dc) const
 {
 	CView::Dump(dc);
 }
 
-CPractice5_1Doc* CPractice5_1View::GetDocument() const // 디버그되지 않은 버전은 인라인으로 지정됩니다.
+CPractice6_1Doc* CPractice6_1View::GetDocument() const // 디버그되지 않은 버전은 인라인으로 지정됩니다.
 {
-	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CPractice5_1Doc)));
-	return (CPractice5_1Doc*)m_pDocument;
+	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CPractice6_1Doc)));
+	return (CPractice6_1Doc*)m_pDocument;
 }
 #endif //_DEBUG
 
 
-// CPractice5_1View 메시지 처리기
+// CPractice6_1View 메시지 처리기
 
 
-void CPractice5_1View::OnLine()
+void CPractice6_1View::OnLine()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
 	// 직선그리기 모드 변경
@@ -207,7 +207,7 @@ void CPractice5_1View::OnLine()
 }
 
 
-void CPractice5_1View::OnEllipse()
+void CPractice6_1View::OnEllipse()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
 	// 원 그리기 모드 변경 
@@ -220,7 +220,7 @@ void CPractice5_1View::OnEllipse()
 }
 
 
-void CPractice5_1View::OnPolygon()
+void CPractice6_1View::OnPolygon()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
 	// 다각형 그리기 모드 변경
@@ -233,7 +233,7 @@ void CPractice5_1View::OnPolygon()
 }
 
 
-void CPractice5_1View::OnLineColor()
+void CPractice6_1View::OnLineColor()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
 	CColorDialog dlgColor;				// 색상 대화상자의 인스턴스 생성
@@ -245,7 +245,7 @@ void CPractice5_1View::OnLineColor()
 }
 
 
-void CPractice5_1View::OnFaceColor()
+void CPractice6_1View::OnFaceColor()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
 	CColorDialog dlgColor;				// 색상 대화상자의 인스턴스 생성
@@ -257,7 +257,7 @@ void CPractice5_1View::OnFaceColor()
 }
 
 
-void CPractice5_1View::OnBdiagonal()
+void CPractice6_1View::OnBdiagonal()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
 	// 왼쪽 45도 빗금 변경
@@ -267,7 +267,7 @@ void CPractice5_1View::OnBdiagonal()
 }
 
 
-void CPractice5_1View::OnCross()
+void CPractice6_1View::OnCross()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
 	// 십자가 빗금 변경
@@ -277,7 +277,7 @@ void CPractice5_1View::OnCross()
 }
 
 
-void CPractice5_1View::OnVertical()
+void CPractice6_1View::OnVertical()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
 	// 수직 빗금 변경
@@ -287,7 +287,7 @@ void CPractice5_1View::OnVertical()
 }
 
 
-void CPractice5_1View::OnUpdateLine(CCmdUI *pCmdUI)
+void CPractice6_1View::OnUpdateLine(CCmdUI *pCmdUI)
 {
 	// TODO: 여기에 명령 업데이트 UI 처리기 코드를 추가합니다.
 	// 직선 그리기 모드이면 메뉴에 체크 표시 
@@ -295,7 +295,7 @@ void CPractice5_1View::OnUpdateLine(CCmdUI *pCmdUI)
 }
 
 
-void CPractice5_1View::OnUpdateEllipse(CCmdUI *pCmdUI)
+void CPractice6_1View::OnUpdateEllipse(CCmdUI *pCmdUI)
 {
 	// TODO: 여기에 명령 업데이트 UI 처리기 코드를 추가합니다.
 	// 원 그리기 모드이면 메뉴에 체크 표시 
@@ -303,7 +303,7 @@ void CPractice5_1View::OnUpdateEllipse(CCmdUI *pCmdUI)
 }
 
 
-void CPractice5_1View::OnUpdatePolygon(CCmdUI *pCmdUI)
+void CPractice6_1View::OnUpdatePolygon(CCmdUI *pCmdUI)
 {
 	// TODO: 여기에 명령 업데이트 UI 처리기 코드를 추가합니다.
 	// 다각형 그리기 모드이면 메뉴에 체크 표시
@@ -311,7 +311,7 @@ void CPractice5_1View::OnUpdatePolygon(CCmdUI *pCmdUI)
 }
 
 
-void CPractice5_1View::OnMouseMove(UINT nFlags, CPoint point)
+void CPractice6_1View::OnMouseMove(UINT nFlags, CPoint point)
 {
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
 	CClientDC dc(this);  // 클라이언트 객체 얻음
@@ -377,7 +377,7 @@ void CPractice5_1View::OnMouseMove(UINT nFlags, CPoint point)
 }
 
 
-void CPractice5_1View::OnLButtonDown(UINT nFlags, CPoint point)
+void CPractice6_1View::OnLButtonDown(UINT nFlags, CPoint point)
 {
 	// 각 변수들 초기화
 	if (m_bFirst)
@@ -417,7 +417,7 @@ void CPractice5_1View::OnLButtonDown(UINT nFlags, CPoint point)
 }
 
 
-void CPractice5_1View::OnLButtonUp(UINT nFlags, CPoint point)
+void CPractice6_1View::OnLButtonUp(UINT nFlags, CPoint point)
 {
 	if (m_bLButtonDown)				// 왼쪽 마우스 버튼이 눌린 상태이면
 	{
@@ -436,7 +436,7 @@ void CPractice5_1View::OnLButtonUp(UINT nFlags, CPoint point)
 }
 
 
-void CPractice5_1View::OnNcRButtonDown(UINT nHitTest, CPoint point)
+void CPractice6_1View::OnNcRButtonDown(UINT nHitTest, CPoint point)
 {
 	// 다각형 그리기
 	if (m_nDrawMode == POLYGON_MODE)

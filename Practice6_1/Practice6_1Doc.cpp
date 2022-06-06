@@ -1,15 +1,15 @@
 
-// Practice5_1Doc.cpp : CPractice5_1Doc 클래스의 구현
+// Practice6_1Doc.cpp : CPractice6_1Doc 클래스의 구현
 //
 
 #include "stdafx.h"
 // SHARED_HANDLERS는 미리 보기, 축소판 그림 및 검색 필터 처리기를 구현하는 ATL 프로젝트에서 정의할 수 있으며
 // 해당 프로젝트와 문서 코드를 공유하도록 해 줍니다.
 #ifndef SHARED_HANDLERS
-#include "Practice5_1.h"
+#include "Practice6_1.h"
 #endif
 
-#include "Practice5_1Doc.h"
+#include "Practice6_1Doc.h"
 
 #include <propkey.h>
 
@@ -19,25 +19,25 @@
 
 // CPractice5_1Doc
 
-IMPLEMENT_DYNCREATE(CPractice5_1Doc, CDocument)
+IMPLEMENT_DYNCREATE(CPractice6_1Doc, CDocument)
 
-BEGIN_MESSAGE_MAP(CPractice5_1Doc, CDocument)
+BEGIN_MESSAGE_MAP(CPractice6_1Doc, CDocument)
 END_MESSAGE_MAP()
 
 
 // CPractice5_1Doc 생성/소멸
 
-CPractice5_1Doc::CPractice5_1Doc()
+CPractice6_1Doc::CPractice6_1Doc()
 {
 	// TODO: 여기에 일회성 생성 코드를 추가합니다.
 
 }
 
-CPractice5_1Doc::~CPractice5_1Doc()
+CPractice6_1Doc::~CPractice6_1Doc()
 {
 }
 
-BOOL CPractice5_1Doc::OnNewDocument()
+BOOL CPractice6_1Doc::OnNewDocument()
 {
 	if (!CDocument::OnNewDocument())
 		return FALSE;
@@ -51,9 +51,9 @@ BOOL CPractice5_1Doc::OnNewDocument()
 
 
 
-// CPractice5_1Doc serialization
+// CPractice6_1Doc serialization
 
-void CPractice5_1Doc::Serialize(CArchive& ar)
+void CPractice6_1Doc::Serialize(CArchive& ar)
 {
 	if (ar.IsStoring())
 	{
@@ -119,19 +119,19 @@ void CPractice5_1Doc::SetSearchContent(const CString& value)
 
 #endif // SHARED_HANDLERS
 
-// CPractice5_1Doc 진단
+// CPractice6_1Doc 진단
 
 #ifdef _DEBUG
-void CPractice5_1Doc::AssertValid() const
+void CPractice6_1Doc::AssertValid() const
 {
 	CDocument::AssertValid();
 }
 
-void CPractice5_1Doc::Dump(CDumpContext& dc) const
+void CPractice6_1Doc::Dump(CDumpContext& dc) const
 {
 	CDocument::Dump(dc);
 }
 #endif //_DEBUG
 
 
-// CPractice5_1Doc 명령
+// CPractice6_1Doc 명령

@@ -1,15 +1,15 @@
 
-// Practice5_1.cpp : 응용 프로그램에 대한 클래스 동작을 정의합니다.
+// Practice6_1.cpp : 응용 프로그램에 대한 클래스 동작을 정의합니다.
 //
 
 #include "stdafx.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
-#include "Practice5_1.h"
+#include "Practice6_1.h"
 #include "MainFrm.h"
 
-#include "Practice5_1Doc.h"
-#include "Practice5_1View.h"
+#include "Practice6_1Doc.h"
+#include "Practice6_1View.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -18,8 +18,8 @@
 
 // CPractice5_1App
 
-BEGIN_MESSAGE_MAP(CPractice5_1App, CWinAppEx)
-	ON_COMMAND(ID_APP_ABOUT, &CPractice5_1App::OnAppAbout)
+BEGIN_MESSAGE_MAP(CPractice6_1App, CWinAppEx)
+	ON_COMMAND(ID_APP_ABOUT, &CPractice6_1App::OnAppAbout)
 	// 표준 파일을 기초로 하는 문서 명령입니다.
 	ON_COMMAND(ID_FILE_NEW, &CWinAppEx::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, &CWinAppEx::OnFileOpen)
@@ -28,9 +28,9 @@ BEGIN_MESSAGE_MAP(CPractice5_1App, CWinAppEx)
 END_MESSAGE_MAP()
 
 
-// CPractice5_1App 생성
+// CPractice6_1App 생성
 
-CPractice5_1App::CPractice5_1App()
+CPractice6_1App::CPractice6_1App()
 {
 	m_bHiColorIcons = TRUE;
 
@@ -51,14 +51,14 @@ CPractice5_1App::CPractice5_1App()
 	// InitInstance에 모든 중요한 초기화 작업을 배치합니다.
 }
 
-// 유일한 CPractice5_1App 개체입니다.
+// 유일한 CPractice6_1App 개체입니다.
 
-CPractice5_1App theApp;
+CPractice6_1App theApp;
 
 
-// CPractice5_1App 초기화
+// CPractice6_1App 초기화
 
-BOOL CPractice5_1App::InitInstance()
+BOOL CPractice6_1App::InitInstance()
 {
 	// 응용 프로그램 매니페스트가 ComCtl32.dll 버전 6 이상을 사용하여 비주얼 스타일을
 	// 사용하도록 지정하는 경우, Windows XP 상에서 반드시 InitCommonControlsEx()가 필요합니다. 
@@ -114,9 +114,9 @@ BOOL CPractice5_1App::InitInstance()
 	CSingleDocTemplate* pDocTemplate;
 	pDocTemplate = new CSingleDocTemplate(
 		IDR_MAINFRAME,
-		RUNTIME_CLASS(CPractice5_1Doc),
+		RUNTIME_CLASS(CPractice6_1Doc),
 		RUNTIME_CLASS(CMainFrame),       // 주 SDI 프레임 창입니다.
-		RUNTIME_CLASS(CPractice5_1View));
+		RUNTIME_CLASS(CPractice6_1View));
 	if (!pDocTemplate)
 		return FALSE;
 	AddDocTemplate(pDocTemplate);
@@ -139,7 +139,7 @@ BOOL CPractice5_1App::InitInstance()
 	return TRUE;
 }
 
-int CPractice5_1App::ExitInstance()
+int CPractice6_1App::ExitInstance()
 {
 	//TODO: 추가한 추가 리소스를 처리합니다.
 	AfxOleTerm(FALSE);
@@ -183,15 +183,15 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 // 대화 상자를 실행하기 위한 응용 프로그램 명령입니다.
-void CPractice5_1App::OnAppAbout()
+void CPractice6_1App::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
 
-// CPractice5_1App 사용자 지정 로드/저장 메서드
+// CPractice6_1App 사용자 지정 로드/저장 메서드
 
-void CPractice5_1App::PreLoadState()
+void CPractice6_1App::PreLoadState()
 {
 	BOOL bNameValid;
 	CString strName;
@@ -200,15 +200,15 @@ void CPractice5_1App::PreLoadState()
 	GetContextMenuManager()->AddMenu(strName, IDR_POPUP_EDIT);
 }
 
-void CPractice5_1App::LoadCustomState()
+void CPractice6_1App::LoadCustomState()
 {
 }
 
-void CPractice5_1App::SaveCustomState()
+void CPractice6_1App::SaveCustomState()
 {
 }
 
-// CPractice5_1App 메시지 처리기
+// CPractice6_1App 메시지 처리기
 
 
 

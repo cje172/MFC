@@ -1,16 +1,16 @@
 
-// Practice5_1Doc.h : CPractice5_1Doc 클래스의 인터페이스
+// Practice6_1Doc.h : CPractice6_1Doc 클래스의 인터페이스
 //
 
 
 #pragma once
 
 
-class CPractice5_1Doc : public CDocument
+class CPractice6_1Doc : public CDocument
 {
 protected: // serialization에서만 만들어집니다.
-	CPractice5_1Doc();
-	DECLARE_DYNCREATE(CPractice5_1Doc)
+	CPractice6_1Doc();
+	DECLARE_DYNCREATE(CPractice6_1Doc)
 
 // 특성입니다.
 public:
@@ -29,7 +29,7 @@ public:
 
 // 구현입니다.
 public:
-	virtual ~CPractice5_1Doc();
+	virtual ~CPractice6_1Doc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

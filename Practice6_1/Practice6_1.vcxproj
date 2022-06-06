@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A2D1DAD3-8300-480B-A5DB-1A180BF7F1C8}</ProjectGuid>
-    <RootNamespace>Practice5_1</RootNamespace>
+    <RootNamespace>Practice6_1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <Keyword>MFCProj</Keyword>
   </PropertyGroup>
@@ -186,18 +186,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainFrm.h" />
-    <ClInclude Include="Practice5_1.h" />
-    <ClInclude Include="Practice5_1Doc.h" />
-    <ClInclude Include="Practice5_1View.h" />
+    <ClInclude Include="Practice6_1.h" />
+    <ClInclude Include="Practice6_1Doc.h" />
+    <ClInclude Include="Practice6_1View.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainFrm.cpp" />
-    <ClCompile Include="Practice5_1.cpp" />
-    <ClCompile Include="Practice5_1Doc.cpp" />
-    <ClCompile Include="Practice5_1View.cpp" />
+    <ClCompile Include="Practice6_1.cpp" />
+    <ClCompile Include="Practice6_1Doc.cpp" />
+    <ClCompile Include="Practice6_1View.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -206,24 +206,24 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Practice5_1.rc" />
+    <ResourceCompile Include="Practice6_1.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\Practice5_1.ico" />
-    <Image Include="res\Practice5_1Doc.ico" />
+    <Image Include="res\Practice6_1.ico" />
+    <Image Include="res\Practice6_1Doc.ico" />
     <Image Include="res\Toolbar.bmp" />
     <Image Include="res\Toolbar256.bmp" />
     <Image Include="UserImages.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\Practice5_1.rc2" />
+    <None Include="res\Practice6_1.rc2" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties RESOURCE_FILE="Practice5_1.rc" />
+      <UserProperties RESOURCE_FILE="Practice6_1.rc" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

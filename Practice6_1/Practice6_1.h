@@ -10,14 +10,14 @@
 #include "resource.h"       // 주 기호입니다.
 
 
-// CPractice5_1App:
-// 이 클래스의 구현에 대해서는 Practice5_1.cpp을 참조하십시오.
+// CPractice6_1App:
+// 이 클래스의 구현에 대해서는 Practice6_1.cpp을 참조하십시오.
 //
 
-class CPractice5_1App : public CWinAppEx
+class CPractice6_1App : public CWinAppEx
 {
 public:
-	CPractice5_1App();
+	CPractice6_1App();
 
 
 // 재정의입니다.
@@ -37,4 +37,4 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
-extern CPractice5_1App theApp;
+extern CPractice6_1App theApp;
